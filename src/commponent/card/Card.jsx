@@ -21,7 +21,7 @@ export const Cards = () => {
     },
     {
       question: "How ti give to component memory?",
-      anwer: "Use useState Hooks  give to component memory",
+      answer: "Use useState Hooks  give to component memory",
     },
     {
       question:"What do yuo we call on input element that is complltely saychronised?",
@@ -42,13 +42,14 @@ export const Cards = () => {
         {qusetionAnswer.map((item, index) => (
           <p className="singleCard"
             key={index}
-            style={{  backgroundColor: ans === item.answer ? "red"  : "white" }}
+            style={{  backgroundColor: ans === item.answer ? "green"  : "white",color:  ans === item.answer ? "white"  : "black" }}
             onClick={() => displayAnswer(item.answer)}
           >
             {ans === item.answer ? ans : item.question}
           </p>
         ))}
       </div>
+
     </div>
   );
 };
